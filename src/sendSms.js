@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-async function sendSms(message) {
+async function sendSms(body) {
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
     const client = require('twilio')(accountSid, authToken);
@@ -11,11 +11,11 @@ async function sendSms(message) {
     try {
         client.messages
             .create({
-                body: message,
+                body,
                 from: `${twilioPhoneNumber}`,
                 to: `${partnersPhoneNumber}`,
         })
-        .then(message => console.log(message.sid));
+        .then(() => console.log(body));
     } catch(err) {
         console.log("Failed to send text message => ", err);
     }

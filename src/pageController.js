@@ -7,7 +7,7 @@ async function scrapeAll(browserInstance) {
 		browser = await browserInstance;
 	}
 	catch(err) {
-		console.log("Could not instantiate browser instance => ", err);
+		console.log("Could not initialize browser instance => ", err);
 	}
 
 	const urls = [
