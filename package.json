@@ -1,0 +1,14 @@
+{
+  "name": "hotel-availability-rooster",
+  "version": "1.0.0",
+  "description": "Alarm when hotel room is available",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "justinAurand",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "13.5.2"
+  }
+}
