@@ -13,12 +13,11 @@ async function scrapeAll(browserInstance) {
 		'https://oiacastleluxuryhotel.reserve-online.net/?checkin=2022-05-26&rooms=1&nights=1&adults=2&currency=USD',
 		'https://oiacastleluxuryhotel.reserve-online.net/?checkin=2022-05-28&rooms=1&nights=1&adults=2&currency=USD',
 	];
-	let isAnAvailability = false;
 	for (const url of urls) {
 		try {
 			const html = await pageScraper.scraper(browser, url);
 			if (html.includes('>Book This<')) {
-				isAnAvailability = true;
+				// Await messaging of wife person
 			};
 		}
 		catch(err) {
@@ -27,10 +26,6 @@ async function scrapeAll(browserInstance) {
 	}
 
 	browser.close();
-	
-	if (isAnAvailability) {
-		// Message your wife person
-	}
 }
 
 module.exports = (browserInstance) => scrapeAll(browserInstance);
