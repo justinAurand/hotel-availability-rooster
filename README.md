@@ -1,6 +1,6 @@
 # Hotel Availability Rooster
 
-Alarm your partner when a specific hotel room is available. Renders a web page (headlessly), checks every minute for specific HTML content (i.e. "Book This"), and sends a text message if that content exists.
+Alarm your partner when a specific hotel room is available. Renders a web page headlessly, checks every 10 minutes for specific HTML content (i.e. "Book This"), and sends a text message if that content exists.
 
 ## Prerequisites
 
