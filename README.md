@@ -1,10 +1,17 @@
 # Hotel Availability Rooster
 
-Alarm my wife when a specific hotel room is available.
+Alarm your partner when a specific hotel room is available.
 
-# Execution
+## Prerequisites
 
-1. Ensure you have Node.js
-2. Clone this repo
-3. `npm install` in this project's root
-4. `npm run start`
+1. Node.js
+2. [Sign up for Twilio and Get a Twilio Phone Number](https://www.twilio.com/docs/sms/quickstart/node#sign-up-for-twilio-and-get-a-twilio-phone-number)
+3. In your Twilio console, verify your partner's phone number
+
+## Execution
+
+1. Clone this repo
+2. In root, run `npm install`
+3. In root, copy `.env.sample` and rename it to `.env`
+4. Replace the values in `.env` with their respective phone numbers and info from your Twilio console
+5. `npm run start`

@@ -1,4 +1,5 @@
 const pageScraper = require('./pageScraper');
+const sendSms = require('./sendSms');
 
 async function scrapeAll(browserInstance) {
 	let browser;
@@ -17,7 +18,7 @@ async function scrapeAll(browserInstance) {
 		try {
 			const html = await pageScraper.scraper(browser, url);
 			if (html.includes('>Book This<')) {
-				// Await messaging of wife person
+				await sendSms(`${url} available!`);
 			};
 		}
 		catch(err) {
