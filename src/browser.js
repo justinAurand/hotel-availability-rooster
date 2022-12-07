@@ -10,7 +10,7 @@ async function startBrowser() {
 	        'ignoreHTTPSErrors': false,
 	    });
 	} catch (err) {
-	    console.log("Could not launch puppeteer => : ", err);
+	    console.log("Could not launch puppeteer => ", err);
 	}
 
     return browser;
